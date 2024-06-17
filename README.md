@@ -23,8 +23,8 @@ This project is a web application that integrates a map interface with drawing c
 
 1. Clone the Repository
 
-`git clone https://github.com/jagodabie/openLayers-map-application`
-` cd openLayers-map-application`
+   `git clone https://github.com/jagodabie/openLayers-map-application`
+   ` cd openLayers-map-application`
 
 2. Install Dependencies
    `npm install`
@@ -38,9 +38,9 @@ This project is a web application that integrates a map interface with drawing c
 
    `npm install -g json-server`
 
-   Start the mock server:
+Start the mock server:
 
-   `json-server --watch db.json --port 3001`
+    `json-server --watch db.json --port 3001`
 
 ## Usage
 
