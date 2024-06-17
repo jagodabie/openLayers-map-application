@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Documentation
 
-## Getting Started
+## Project Overview
 
-First, run the development server:
+This project is a web application that integrates a map interface with drawing capabilities, allowing users to add geometries (points, lines, polygons) to the map. When a geometry is created, its WKT (Well-Known Text) representation is automatically filled in a form. Users can then submit this form to a mock backend. The application uses React, OpenLayers for the map, and Material-UI for the user interface.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Feature
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Create points, lines, and polygons
+- Edit existing geometries
+- Delete existing geometries
+- Submit geometries to a mock backend
+- Display a form with the WKT representation of the geometries
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Prerequisites
 
-## Learn More
+- Node.js (>= 14.x)
+- npm (>= 6.x)
 
-To learn more about Next.js, take a look at the following resources:
+### Steps
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone the Repository
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+`git clone https://github.com/jagodabie/openLayers-map-application`
+` cd openLayers-map-application`
 
-## Deploy on Vercel
+2. Install Dependencies
+   `npm install`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Start the Development Server
+   `npm run dev`
+   This will start the application on http://localhost:3000.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. Setup Mock Backend
+   Install json-server globally if not already installed:
+
+   `npm install -g json-server`
+
+   Start the mock server:
+
+   `json-server --watch db.json --port 3001`
+
+## Usage
+
+1.  Open the application in your browser at http://localhost:3000.
+2.  Use the buttons in the menu to select a drawing tool (Point, Line, Polygon).
+3.  Draw on the map. The WKT representation of the geometry will be automatically generated.
+4.  Submit the form. The WKT will be sent to the mock backend.
+5.  An alert will notify you of the form submission result.
+
+## Dependencies
+
+`react`: ^17.0.2
+`react-dom`: ^17.0.2
+`@mui/material`: ^5.0.0
+`ol`: ^6.5.0 (OpenLayers)
+`json-server`: ^0.16.3 (for mock backend)
