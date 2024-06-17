@@ -23,9 +23,9 @@ This project is a web application that integrates a map interface with drawing c
 
 1.  Clone the Repository
 
-    `git clone https://github.com/jagodabie/openLayers-map-application`
+        git clone https://github.com/jagodabie/openLayers-map-application
 
-    ` cd openLayers-map-application`
+        cd openLayers-map-application
 
 2.  Install Dependencies
 
